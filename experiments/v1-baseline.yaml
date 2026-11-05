@@ -1,0 +1,20 @@
+# Illustrative configuration. Parameter values are initial hypotheses, not tuned settings.
+name: v1-naive-dense
+parser:
+  strategy: naive_epub
+chunking:
+  strategy: fixed_size
+  chunk_size: 500
+  chunk_overlap: 50
+  unit: tokens  # implementation must explicitly enforce this unit
+embedding:
+  provider: TBD
+  model: TBD
+retrieval:
+  strategy: dense
+  top_k: 5
+reranking:
+  enabled: false
+evaluation:
+  dataset: devatlas-v1
+  metrics: [recall_at_5, mrr, ndcg_at_5, latency_ms]
