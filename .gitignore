@@ -16,3 +16,5 @@ data/
 artifacts/
 node_modules/
 .next/
+# Added by Braintrust Wizard
+.braintrust.json
